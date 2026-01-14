@@ -1,27 +1,27 @@
 "use client";
 
-import * as React from "react";
-import Link from "next/link";
 import { RiCheckLine } from "@remixicon/react";
-import { useCalendarContext } from "@/components/event-calendar/calendar-context";
+import Link from "next/link";
+import type * as React from "react";
 import { etiquettes } from "@/components/big-calendar";
+import { useCalendarContext } from "@/components/event-calendar/calendar-context";
 
 import { NavUser } from "@/components/nav-user";
+import SidebarCalendar from "@/components/sidebar-calendar";
+import { Checkbox } from "@/components/ui/checkbox";
 import {
   Sidebar,
   SidebarContent,
   SidebarFooter,
+  SidebarGroup,
+  SidebarGroupContent,
+  SidebarGroupLabel,
   SidebarHeader,
   SidebarMenu,
   SidebarMenuButton,
   SidebarMenuItem,
-  SidebarGroup,
-  SidebarGroupLabel,
-  SidebarGroupContent,
   SidebarTrigger,
 } from "@/components/ui/sidebar";
-import SidebarCalendar from "@/components/sidebar-calendar";
-import { Checkbox } from "@/components/ui/checkbox";
 
 const data = {
   user: {
