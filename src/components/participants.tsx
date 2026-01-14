@@ -1,5 +1,5 @@
 import { Button } from "@/components/ui/button";
-import { RiMoreFill } from "@remixicon/react";
+import { MoreHorizontal } from "lucide-react";
 
 export default function Participants() {
   return (
@@ -37,7 +37,7 @@ export default function Participants() {
         className="flex size-6 items-center justify-center rounded-full text-xs ring-1 ring-background border-transparent shadow-none text-muted-foreground/80 dark:bg-background dark:hover:bg-background dark:border-transparent"
         size="icon"
       >
-        <RiMoreFill className="size-4" size={16} />
+        <MoreHorizontal className="size-4" />
       </Button>
     </div>
   );

@@ -1,6 +1,6 @@
 "use client";
 
-import { RiCheckLine } from "@remixicon/react";
+import { Check } from "lucide-react";
 import Link from "next/link";
 import type * as React from "react";
 import { etiquettes } from "@/components/big-calendar";
@@ -89,9 +89,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
                             toggleColorVisibility(item.color)
                           }
                         />
-                        <RiCheckLine
-                          className="peer-not-data-[state=checked]:invisible"
-                          size={16}
+                        <Check
+                          className="peer-not-data-[state=checked]:invisible size-4"
                           aria-hidden="true"
                         />
                         <label

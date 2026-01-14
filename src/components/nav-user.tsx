@@ -1,10 +1,10 @@
 import {
-  RiExpandUpDownLine,
-  RiGroupLine,
-  RiLogoutCircleLine,
-  RiSparklingLine,
-  RiUserLine,
-} from "@remixicon/react";
+  ChevronsUpDown,
+  Users,
+  LogOut,
+  Sparkles,
+  User,
+} from "lucide-react";
 
 import { Avatar, AvatarFallback, AvatarImage } from "@/components/ui/avatar";
 import {
@@ -45,7 +45,7 @@ export function NavUser({
               <div className="grid flex-1 text-left text-sm leading-tight">
                 <span className="truncate font-medium">{user.name}</span>
               </div>
-              <RiExpandUpDownLine className="ml-auto size-5 text-muted-foreground/80" />
+              <ChevronsUpDown className="ml-auto size-5 text-muted-foreground/80" />
             </SidebarMenuButton>
           </DropdownMenuTrigger>
           <DropdownMenuContent
@@ -56,29 +56,25 @@ export function NavUser({
           >
             <DropdownMenuGroup>
               <DropdownMenuItem className="gap-3 focus:bg-sidebar-accent">
-                <RiUserLine
-                  size={20}
+                <User
                   className="size-5 text-muted-foreground/80"
                 />
                 Profile
               </DropdownMenuItem>
               <DropdownMenuItem className="gap-3 focus:bg-sidebar-accent">
-                <RiGroupLine
-                  size={20}
+                <Users
                   className="size-5 text-muted-foreground/80"
                 />
                 Accounts
               </DropdownMenuItem>
               <DropdownMenuItem className="gap-3 focus:bg-sidebar-accent">
-                <RiSparklingLine
-                  size={20}
+                <Sparkles
                   className="size-5 text-muted-foreground/80"
                 />
                 Upgrade
               </DropdownMenuItem>
               <DropdownMenuItem className="gap-3 focus:bg-sidebar-accent">
-                <RiLogoutCircleLine
-                  size={20}
+                <LogOut
                   className="size-5 text-muted-foreground/80"
                 />
                 Logout
