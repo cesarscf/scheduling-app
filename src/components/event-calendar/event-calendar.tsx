@@ -1,7 +1,5 @@
 "use client";
 
-import { useEffect, useMemo, useState } from "react";
-import { useCalendarContext } from "./calendar-context";
 import {
   addDays,
   addMonths,
@@ -18,15 +16,15 @@ import {
   ChevronLeftIcon,
   ChevronRightIcon,
 } from "lucide-react";
+import { useEffect, useMemo, useState } from "react";
 import { toast } from "sonner";
-
 import {
-  addHoursToDate,
   AgendaDaysToShow,
   AgendaView,
+  addHoursToDate,
   CalendarDndProvider,
-  CalendarEvent,
-  CalendarView,
+  type CalendarEvent,
+  type CalendarView,
   DayView,
   EventDialog,
   EventGap,
@@ -35,7 +33,8 @@ import {
   WeekCellsHeight,
   WeekView,
 } from "@/components/event-calendar";
-import { cn } from "@/lib/utils";
+import Participants from "@/components/participants";
+import ThemeToggle from "@/components/theme-toggle";
 import { Button } from "@/components/ui/button";
 import {
   DropdownMenu,
@@ -45,8 +44,8 @@ import {
   DropdownMenuTrigger,
 } from "@/components/ui/dropdown-menu";
 import { SidebarTrigger, useSidebar } from "@/components/ui/sidebar";
-import ThemeToggle from "@/components/theme-toggle";
-import Participants from "@/components/participants";
+import { cn } from "@/lib/utils";
+import { useCalendarContext } from "./calendar-context";
 
 export interface EventCalendarProps {
   events?: CalendarEvent[];

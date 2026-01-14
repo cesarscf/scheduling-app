@@ -9,7 +9,6 @@ import {
 } from "@/components/event-calendar";
 import { useCalendarContext } from "@/components/event-calendar/calendar-context";
 
-// Etiquettes data for calendar filtering
 export const etiquettes = [
   {
     id: "my-events",
@@ -590,7 +589,7 @@ const sampleEvents: CalendarEvent[] = [
   },
 ];
 
-export default function Component() {
+export function BigCalendar() {
   const [events, setEvents] = useState<CalendarEvent[]>(sampleEvents);
   const { isColorVisible } = useCalendarContext();
 

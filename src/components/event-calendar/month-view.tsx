@@ -1,6 +1,5 @@
 "use client";
 
-import React, { useEffect, useMemo, useState } from "react";
 import {
   addDays,
   eachDayOfInterval,
@@ -13,13 +12,10 @@ import {
   startOfMonth,
   startOfWeek,
 } from "date-fns";
-
+import type React from "react";
+import { useEffect, useMemo, useState } from "react";
 import {
-  Popover,
-  PopoverContent,
-  PopoverTrigger,
-} from "@/components/ui/popover";
-import {
+  type CalendarEvent,
   DraggableEvent,
   DroppableCell,
   EventGap,
@@ -30,9 +26,13 @@ import {
   getSpanningEventsForDay,
   sortEvents,
   useEventVisibility,
-  type CalendarEvent,
 } from "@/components/event-calendar";
 import { DefaultStartHour } from "@/components/event-calendar/constants";
+import {
+  Popover,
+  PopoverContent,
+  PopoverTrigger,
+} from "@/components/ui/popover";
 
 interface MonthViewProps {
   currentDate: Date;

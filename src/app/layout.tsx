@@ -1,18 +1,9 @@
-import { Geist, Geist_Mono } from "next/font/google";
+import { CalendarProvider } from "@/components/event-calendar/calendar-context";
 import { Toaster } from "@/components/ui/sonner";
 import { ThemeProvider } from "@/providers/theme-provider";
-import { CalendarProvider } from "@/components/event-calendar/calendar-context";
 import "./globals.css";
-
-const fontSans = Geist({
-  variable: "--font-sans",
-  subsets: ["latin"],
-});
-
-const fontMono = Geist_Mono({
-  variable: "--font-mono",
-  subsets: ["latin"],
-});
+import { fontMono, fontSans } from "@/lib/fonts";
+import { cn } from "@/lib/utils";
 
 export default function RootLayout({
   children,
@@ -20,9 +11,13 @@ export default function RootLayout({
   children: React.ReactNode;
 }>) {
   return (
-    <html lang="en" suppressHydrationWarning>
+    <html lang="pt-BR" suppressHydrationWarning>
       <body
-        className={`${fontSans.variable} ${fontMono.variable} bg-sidebar font-sans antialiased`}
+        className={cn(
+          "isolate min-h-screen font-sans antialiased",
+          fontSans.variable,
+          fontMono.variable,
+        )}
       >
         <ThemeProvider
           attribute="class"

@@ -7,7 +7,6 @@ import { etiquettes } from "@/components/big-calendar";
 import { useCalendarContext } from "@/components/event-calendar/calendar-context";
 
 import { NavUser } from "@/components/nav-user";
-import SidebarCalendar from "@/components/sidebar-calendar";
 import { Checkbox } from "@/components/ui/checkbox";
 import {
   Sidebar,
@@ -35,11 +34,7 @@ const data = {
 export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
   const { isColorVisible, toggleColorVisibility } = useCalendarContext();
   return (
-    <Sidebar
-      variant="inset"
-      {...props}
-      className="dark scheme-only-dark max-lg:p-3 lg:pe-1"
-    >
+    <Sidebar variant="inset" {...props}>
       <SidebarHeader>
         <div className="flex justify-between items-center gap-2">
           <Link className="inline-flex" href="/">
@@ -63,11 +58,8 @@ export function AppSidebar({ ...props }: React.ComponentProps<typeof Sidebar>) {
           <SidebarTrigger className="text-muted-foreground/80 hover:text-foreground/80 hover:bg-transparent!" />
         </div>
       </SidebarHeader>
-      <SidebarContent className="gap-0 mt-3 pt-3 border-t">
-        <SidebarGroup className="px-1">
-          <SidebarCalendar />
-        </SidebarGroup>
-        <SidebarGroup className="px-1 mt-3 pt-4 border-t">
+      <SidebarContent>
+        <SidebarGroup className="px-1 mt-3 pt-4">
           <SidebarGroupLabel className="uppercase text-muted-foreground/65">
             Calendars
           </SidebarGroupLabel>
