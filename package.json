@@ -12,6 +12,7 @@
     "db:generate": "drizzle-kit generate",
     "db:migrate": "drizzle-kit migrate",
     "db:push": "drizzle-kit push",
+    "db:pull": "drizzle-kit pull",
     "db:studio": "drizzle-kit studio"
   },
   "dependencies": {
@@ -32,6 +33,7 @@
     "@radix-ui/react-tooltip": "^1.2.8",
     "@remixicon/react": "^4.6.0",
     "@t3-oss/env-nextjs": "^0.13.10",
+    "better-auth": "^1.4.12",
     "class-variance-authority": "^0.7.1",
     "clsx": "^2.1.1",
     "date-fns": "^4.1.0",
